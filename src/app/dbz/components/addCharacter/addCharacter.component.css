@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+form{
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.37);
+  margin: 0.5rem;
+}
+
+form.row {
+  background-color: #28a745; /* Matching bg-success */
+  color: #ffffff;           /* Matching white text */
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ced4da; /* Similar to ul border */
+}
+
+/* Style for form labels */
+form .form-label {
+  color: #ffffff; /* Matching form text color */
+  margin-top: 10px;
+}
+
+/* Style for input fields */
+form .form-control {
+  background-color: #e2e2e2; /* Similar to ul background */
+  border: 1px solid #000000; /* Similar to ul border */
+  color: #495057;            /* Similar to ul text color */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+form .form-control:focus {
+  background-color: #ffffff; /* Similar to ul background */
+  border: 2px solid #000000; /* Similar to ul border */
+  border-radius: 5px;
+  margin-bottom: 15px;
+  color: #000;
+
+}
