@@ -5,6 +5,7 @@ import { CounterModule } from './counter/counter.module';
  import { HeroesModule } from './heroes/heroes.module';
  import { DbzModule } from './dbz/dbz.module';
  import { CalendarModule } from 'primeng/calendar';
+ import { ChartsModule } from './charts/charts.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CounterModule } from './counter/counter.module';
     HeroesModule,
     CalendarModule,
     DbzModule,
+    ChartsModule,
 
   ],
 
