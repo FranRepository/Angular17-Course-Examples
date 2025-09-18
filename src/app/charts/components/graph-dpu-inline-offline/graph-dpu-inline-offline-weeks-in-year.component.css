@@ -1,0 +1,185 @@
+.chart-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.controls-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.controls-section h2 {
+  margin: 0 0 15px 0;
+  color: #495057;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.info-section {
+  margin-top: 15px;
+  padding: 12px;
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 4px;
+}
+
+.info-text {
+  margin: 0;
+  color: #0066cc;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.info-icon {
+  font-size: 16px;
+  margin-top: 1px;
+}
+
+.charts-wrapper {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-content {
+  min-height: 400px;
+  width: 100%;
+}
+
+.legend-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.fch-color {
+  background-color: #3b82f6;
+}
+
+.before-color {
+  background-color: #10b981;
+}
+
+.legend-line {
+  width: 20px;
+  height: 2px;
+  background-color: #ef4444;
+  border-style: dashed;
+  border-width: 1px 0;
+  border-color: #ef4444;
+}
+
+.trend-line {
+  background: linear-gradient(to right, #ef4444 50%, transparent 50%);
+  background-size: 4px 2px;
+}
+
+.legend-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 10px;
+  }
+  
+  .controls-section {
+    padding: 15px;
+  }
+  
+  .controls-section h2 {
+    font-size: 20px;
+  }
+  
+  .legend-info {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .chart-content {
+    min-height: 300px;
+  }
+}
+
+/* Loading state */
+.chart-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #6c757d;
+  font-size: 16px;
+}
+
+/* Error state */
+.chart-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #dc3545;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Chart title styling within ECharts */
+.chart-content div {
+  border-radius: 4px;
+  overflow: hidden;
+}

@@ -1,0 +1,50 @@
+<div class="chart-container">
+  <div class="controls-section">
+    <h2>DPU InLine and OffLine Weeks in Year Analysis</h2>
+    
+    <div class="control-group">
+      <label for="ouSelect">Select OU:</label>
+      <select 
+        id="ouSelect" 
+        [(ngModel)]="selectedOu" 
+        (change)="onOuSelectionChange(selectedOu)"
+        class="form-select">
+        <option value="FCH/BEFORE">FCH/BEFORE (Stacked)</option>
+        <option value="FCH">FCH Only</option>
+        <option value="BEFORE">BEFORE Only</option>
+      </select>
+    </div>
+    
+    <div class="info-section" *ngIf="selectedOu === 'FCH/BEFORE'">
+      <p class="info-text">
+        <i class="info-icon">ℹ️</i>
+        Showing stacked bar charts for each model-type combination. 
+        FCH and BEFORE values are stacked with trend lines based on totals.
+      </p>
+    </div>
+  </div>
+
+  <div class="charts-wrapper">
+    <div 
+      #chartContainer 
+      class="chart-content"
+      (window:resize)="onResize()">
+      <!-- Charts are dynamically generated here -->
+    </div>
+  </div>
+
+  <div class="legend-info" *ngIf="selectedOu === 'FCH/BEFORE'">
+    <div class="legend-item">
+      <span class="legend-color fch-color"></span>
+      <span class="legend-label">FCH</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-color before-color"></span>
+      <span class="legend-label">BEFORE</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-line trend-line"></span>
+      <span class="legend-label">Trend Line</span>
+    </div>
+  </div>
+</div>
